@@ -48,9 +48,9 @@ app.use("/user", LogOut);
 app.use("/user", MyProject);
 app.use("/user", SerchePublicProject);
 
-if (process.env.NODE_ENV == "production") {
-  app.use(express.static("clent/build"));
-}
+// if (process.env.NODE_ENV == "production") {
+//   app.use(express.static("clent/build"));
+// }
 
 app.listen(PORT, () => {
   console.log(`app listening on port ${PORT}`);
