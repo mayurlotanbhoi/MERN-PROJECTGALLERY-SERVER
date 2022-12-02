@@ -41,7 +41,8 @@ Rout.post("/login", async (req, res, next) => {
       .cookie("jwtoken", jsonwebtoken, {
         httpOnly: true,
         expiresIn: "30d",
-        secure: "none",
+        secure: true,
+        sameSite: "None",
        
         path: "/"
       })
