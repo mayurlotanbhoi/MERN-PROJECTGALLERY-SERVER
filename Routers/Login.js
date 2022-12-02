@@ -41,8 +41,8 @@ Rout.post("/login", async (req, res, next) => {
       .cookie("jwtoken", jsonwebtoken, {
         httpOnly: true,
         expiresIn: "30d",
-        path: "https://projectgallery.onrender.com",
-        secure: false
+       
+        secure: true
       })
       .json({ massege: "Login SuccesFull" });
     next();
