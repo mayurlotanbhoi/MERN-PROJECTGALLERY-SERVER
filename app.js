@@ -49,7 +49,7 @@ app.use("/user", MyProject);
 app.use("/user", SerchePublicProject);
 
 // if (process.env.NODE_ENV == "production") {
-//   app.use(express.static("clent/build"));
+//   app.use(express.static("client/build"));
 // }
 
 app.listen(PORT, () => {

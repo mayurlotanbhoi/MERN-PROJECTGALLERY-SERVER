@@ -8,7 +8,10 @@ async function jwtVerify(req, res, next) {
 
     // console.log(token);
 
-    if (!token) return;
+    if (!token) {
+      res.send({massege: "login first"})
+      return;
+    };
 
     const user = jwt.verify(token, process.env.SECREATE_KEY);
 
