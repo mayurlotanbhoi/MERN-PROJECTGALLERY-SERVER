@@ -20,7 +20,7 @@ mongoose
 app.use(cookiParser());
 app.use(
   cors({
-    origin: ["http://localhost:3000","https://projectgallery.onrender.com/"],
+    origin: ["https://projectgallery.onrender.com/"],
     credentials: true,
   })
 );
