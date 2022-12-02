@@ -5,7 +5,7 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 5000;
 const DB = process.env.DB;
 
 mongoose
@@ -20,7 +20,7 @@ mongoose
 app.use(cookiParser());
 app.use(
   cors({
-    origin: ["https://projectgallery.onrender.com/"],
+    origin: ["https://projectgallery.onrender.com"],
     credentials: true,
   })
 );
