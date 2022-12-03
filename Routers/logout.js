@@ -6,20 +6,13 @@ Rout.get("/logout", (req, res) => {
 
     console.log(req)
 
-    res.status(200)
-      .cookie("jwtoken", "", {
-        httpOnly: true,
-        expires: Date.now(0),
-        secure: true,
-        sameSite: "None",
-        path: "/",
-        overwrite: true,
-      })
-      .json({ massege: "Logout SuccesFull" });
+    
+    res.clearCookie("jwtoken");
+    res.status(200).json({ massege: "Logout SuccesFull" });
     
   } catch (error) {
     console.log(error)
-    
+    res.status(500).json({masseg: "error"})
   }
   
       
