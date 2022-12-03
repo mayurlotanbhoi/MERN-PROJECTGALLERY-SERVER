@@ -1,9 +1,17 @@
 const Rout = require("express").Router();
 
 Rout.get("/logout", (req, res) => {
-  res.clearCookie("jwtoken",{ path: '/' });
-
-  res.status(200).json({ massege: "logout" });
+  res
+      .status(200)
+      .cookie("jwtoken", jsonwebtoken, {
+        httpOnly: true,
+        expires: Date.now(),
+        secure: true,
+        sameSite: "None",
+       
+        path: "/"
+      })
+      .json({ massege: "Logout SuccesFull" });
 });
 
 module.exports = Rout;
