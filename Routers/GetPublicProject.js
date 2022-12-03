@@ -10,8 +10,8 @@ Rout.get("/allProject/:page", async (req, res) => {
 
     const allProject = await PublicSchema.find({})
       .sort({ createdAt: "desc" })
-      .skip(+pageNum * 9)
-      .limit(9);
+      .skip(+pageNum * 25)
+      .limit(25);
 
     const total = await PublicSchema.countDocuments();
 
