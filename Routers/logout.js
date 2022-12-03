@@ -3,9 +3,9 @@ const Rout = require("express").Router();
 Rout.get("/logout", (req, res) => {
   
       res.status(200)
-      .cookie("jwtoken", "no data", {
+      .cookie("jwtoken", "", {
         httpOnly: true,
-        expires: new Date(Date.now()),
+        expires: Date.now(),
         secure: true,
         sameSite: "None",
        
