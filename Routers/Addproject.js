@@ -43,7 +43,7 @@ Rout.post("/projectadd", upload.single("myfile"), async (req, res) => {
 
     res.status(201).json({ massege: "uppdate  sussesfull" });
   } catch (error) {
-    console.log({ServerError:error});
+    console.log(error);
   }
 });
 

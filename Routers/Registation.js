@@ -68,10 +68,9 @@ Rout.post("/register", upload.single("myfile"), async (req, res) => {
     console.log(data);
 
     res.status(201).json({ massege: "Registation Succesfull" });
-
   } catch (error) {
     console.log(error);
-    res.status(500).send({ serverError : error});
+    res.status(500).send( "server error" + error);
   }
 });
 
