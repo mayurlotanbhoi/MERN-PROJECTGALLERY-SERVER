@@ -34,8 +34,7 @@ const upload = multer({ storage: storage });
 
 Rout.post("/register", upload.single("myfile"), async (req, res) => {
   try {
-    // const useInfo = req.body;
-    const useInfo = JSON.parse(req.body);
+    const useInfo = req.body;
 
     useInfo.Avatar = req.file.path;
 
