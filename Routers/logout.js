@@ -7,7 +7,8 @@ Rout.get("/logout", (req, res) => {
     console.log(req)
 
     
-    res.clearCookie("jwtoken",{path: "/"});
+//     res.clearCookie("jwtoken",{path: "/"});
+    res.clearCookie("jwtoken");
     res.status(200).json({ massege: "Logout SuccesFull" });
     
   } catch (error) {
