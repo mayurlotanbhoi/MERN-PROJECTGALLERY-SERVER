@@ -7,6 +7,7 @@ const mongoose = require("mongoose");
 const app = express();
 const PORT = process.env.PORT || 5000;
 const DB = process.env.DB;
+app.use(express.json({ limit: "50mb" }));
 
 mongoose
   .connect(DB, { useNewUrlParser: true, useUnifiedTopology: true })
