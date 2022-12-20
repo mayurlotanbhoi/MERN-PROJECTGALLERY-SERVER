@@ -27,7 +27,7 @@ app.use(
 );
 app.use("/public", express.static("public"));
 
-app.use(express.json());
+// app.use(express.json());
 
 const Register = require("./Routers/Registation");
 const Login = require("./Routers/Login");
