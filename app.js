@@ -18,7 +18,7 @@ mongoose
 
 app.use(cookiParser());
 
-app.use(express.json({ limit: "50mb" }));
+
 
 app.use(
   cors({
@@ -27,6 +27,7 @@ app.use(
   })
 );
 app.use("/public", express.static("public"));
+app.use(express.json({ limit: "50mb" }));
 
 // app.use(express.json());
 
