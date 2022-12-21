@@ -22,8 +22,9 @@ app.use(cookiParser());
 
 app.use(
   cors({
-    origin: ["https://projectgallery.onrender.com","https://projectgallery.onrender.com/","https://mern-project-gallery-app.onrender.com/","http://localhost:3000"],
-    credentials: true,
+    origin:'*', 
+    credentials:true,            //access-control-allow-credentials:true
+    optionSuccessStatus:200,
   })
 );
 app.use("/public", express.static("public"));
